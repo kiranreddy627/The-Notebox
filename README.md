@@ -31,10 +31,6 @@ The NOTEBOX is a full-stack CRUD Todo app developed using the MERN stack (MongoD
 ## Getting Started
 
 1. **Clone the Repository:**
-   ```bash
-   git clone https://github.com/your-username/The-NOTEBOX.git
-   cd The-NOTEBOX
-   ```
 
 2. **Install Dependencies:**
    ```bash
@@ -61,7 +57,7 @@ The NOTEBOX is a full-stack CRUD Todo app developed using the MERN stack (MongoD
    npm start
    ```
 
-   The app should now be accessible at `http://localhost:3000/`.
+   The app should now be accessible at `http://localhost:3001/`.
 
 ## Configuration
 
