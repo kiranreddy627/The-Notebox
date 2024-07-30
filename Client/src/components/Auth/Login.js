@@ -6,7 +6,7 @@ const Login = (props) => {
     console.log('Login form submitted');
 
     try {
-      const response = await fetch('http://kiran-the-notebook-627.vercel.app/login', {
+      const response = await fetch('http://kiran-the-notebook-627.vercel.app/api/auth/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
