@@ -108,7 +108,7 @@ const AuthForm = ({ formType, onSubmit }) => {
           {formType === 'login' ? 'Login' : 'Sign up'}
         </button>
         <div className='flex gap-2 mt-2'>
-          <p className='text-gray-400'>{formType === 'login' ? "Don't have an accoun1?" : 'Already Have an account? '}</p>
+          <p className='text-gray-400'>{formType === 'login' ? "Don't have an account?" : 'Already Have an account? '}</p>
           <Link to={formType === 'login' ? '/signup' : '/login'} className='text-gray-200 hover:cursor-pointer'>
             {formType === 'login' ? 'Sign up' : 'Login'}
           </Link>
