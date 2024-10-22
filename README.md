@@ -68,10 +68,6 @@ The NOTEBOX is a full-stack CRUD Todo app developed using the MERN stack (MongoD
 
 Contributions are welcome! Feel free to submit pull requests or raise issues.
 
-## License
-
-This project is licensed under the [MIT License](LICENSE).
-
 ## Acknowledgments
 
 - This project was made possible by the MERN stack and various open-source libraries and tools.
