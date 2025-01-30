@@ -7,7 +7,7 @@ const SignUp = (props) => {
 
   const handleSignUpSubmit = async (credentials, navigate) => {
     try {
-      const response = await fetch('https://the-notebox-fbuj.vercel.app/api/auth/createuser', {
+      const response = await fetch('https://the-notebox.vercel.app/api/auth/createuser', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
