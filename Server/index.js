@@ -5,7 +5,7 @@ const cors = require('cors');
 
 app.use(cors(
   {
-      origin: "https://kiran-the-notebook-6271.vercel.app",
+      origin: "https://kiran-the-notebook-6271.vercel.app","https://the-notebox-fbuj.vercel.app",
       methods: ['GET', 'POST', 'PUT', 'DELETE'], 
       credentials: true
   }
