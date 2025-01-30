@@ -1,35 +1,29 @@
 const express = require("express");
+const cors = require("cors");
+
 const app = express();
 const port = 8080;
-const cors = require('cors');
 
-app.use(cors())
-app.use(cors(
-  {
-      origin: "https://kiran-the-notebook-6271.vercel.app","https://the-notebox-fbuj.vercel.app","https://the-notebox-4zd2.vercel.app",
-      methods: ['GET', 'POST', 'PUT', 'DELETE'], 
-      credentials: true
-  }
-));
+// CORS configuration - Allow any origin
+app.use(
+  cors({
+    origin: true, // Dynamically allows the requesting origin
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true,
+  })
+);
 
-// Available routes
+// Middleware to parse JSON
 app.use(express.json());
 
 // Connect to MongoDB
-require("./db")(); // Assuming db.js exports a function for connecting to MongoDB
+require("./db")(); // Ensure db.js exports a function for connecting to MongoDB
 
+// Available routes
 app.use("/api/auth", require("./routes/auth"));
 app.use("/api/notes", require("./routes/notes"));
 
 // Start the server
-const server = app.listen(port, () => {
+app.listen(port, () => {
   console.log(`Notebox-backend listening on port ${port}`);
-});
-
-//shutdown
-process.on('SIGTERM', () => {
-  console.log('Received SIGTERM. Shutting down gracefully');
-  server.close(() => {
-    process.exit(0);
-  });
 });
