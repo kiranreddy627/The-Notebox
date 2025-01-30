@@ -3,6 +3,7 @@ const app = express();
 const port = 8080;
 const cors = require('cors');
 
+app.use(cors())
 app.use(cors(
   {
       origin: "https://kiran-the-notebook-6271.vercel.app","https://the-notebox-fbuj.vercel.app",
